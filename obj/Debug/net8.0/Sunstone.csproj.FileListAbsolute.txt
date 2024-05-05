@@ -1,0 +1,4 @@
+C:\Users\jake\Apps\Sunstone\obj\Debug\net8.0\Sunstone.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jake\Apps\Sunstone\obj\Debug\net8.0\Sunstone.AssemblyInfoInputs.cache
+C:\Users\jake\Apps\Sunstone\obj\Debug\net8.0\Sunstone.AssemblyInfo.cs
+C:\Users\jake\Apps\Sunstone\obj\Debug\net8.0\Sunstone.csproj.CoreCompileInputs.cache
