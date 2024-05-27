@@ -1,6 +1,7 @@
 using API.Controllers;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
+using Sunstone;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<StoreContext>(opt =>
 });
 builder.Services.AddCors();
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 //Map controllers
 app.MapControllers();
