@@ -1,7 +1,7 @@
 import { ShoppingCart } from "@mui/icons-material";
 import { AppBar, Badge, Box, IconButton, List, ListItem, Switch, Toolbar, Typography } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
-import { useStoreContext } from "../context/StoreContext";
+import { useAppSelector } from "../store/configureStore";
 
 const midLinks = [
     {title: 'catalog', path: '/catalog'},
@@ -23,7 +23,7 @@ const navStyles = [
             color: 'grey.500'
         },
         '&.active': {
-            color: 'text.secondary'
+            color: '#F88379'
         }
     }
 ]
@@ -35,7 +35,7 @@ interface Props {
 }
 
 export default function Header({darkMode, handleThemeChange}: Props) {
-    const {cart} = useStoreContext();  
+    const {cart} = useAppSelector(state => state.cart);  
     const itemCount = cart?.items.reduce((sum, item) => sum + item.quantity, 0)
 
     return (
@@ -46,7 +46,7 @@ export default function Header({darkMode, handleThemeChange}: Props) {
                     <Typography variant='h6' component={NavLink} 
                         to='/'
                         sx={navStyles}>
-                        Sunstone
+                        Iron Coral
                     </Typography>
                     <Switch checked={darkMode} onChange={handleThemeChange} />
                 </Box>
