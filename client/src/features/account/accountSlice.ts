@@ -68,7 +68,6 @@ export const accountSlice = createSlice({
             state.user = null;
             localStorage.removeItem('user');
             toast.error('Session expired - please login again');
-            console.log("toast please")
             router.navigate('/');
         })
         builder.addMatcher(isAnyOf(signInUser.fulfilled, fetchCurrentUser.fulfilled), (state, action) => {

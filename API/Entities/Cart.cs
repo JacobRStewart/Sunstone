@@ -9,6 +9,10 @@ public class Cart
 
     public List<CartItem> Items { get; set; } = new();
 
+    public string PaymentIntentId { get; set; }
+
+    public string ClientSecret { get; set; }
+
     public void AddItem(Product product, int quantity) 
     {
         if (Items.All(item => item.ProductId != product.Id))

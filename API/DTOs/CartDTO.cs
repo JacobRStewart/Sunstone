@@ -7,4 +7,8 @@ public class CartDTO
     public string BuyerId { get; set; }
 
     public List<CartItemDTO> Items {get; set; }
+
+    public string PaymentIntentId { get; set; }
+
+    public string ClientSecret { get; set; }   
 }
